@@ -2,25 +2,62 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0a0a0a;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* base */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-white text-neutral-900 antialiased;
+}
+
+/* typography */
+h1, h2, h3 {
+  @apply tracking-tight;
+}
+
+h1 {
+  @apply leading-[1.1];
+}
+
+p {
+  @apply leading-relaxed;
+}
+
+/* layout system */
+.container {
+  @apply mx-auto max-w-7xl px-6 lg:px-8;
+}
+
+.section {
+  @apply py-24 lg:py-32;
+}
+
+/* components */
+.paper {
+  @apply rounded-2xl border border-neutral-200 bg-white shadow-sm;
+}
+
+.card-hover {
+  @apply transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl;
+}
+
+/* media */
+img {
+  @apply max-w-full h-auto;
+}
+
+/* interaction */
+button,
+a {
+  @apply transition-colors duration-200;
+}
+
+/* selection */
+::selection {
+  background: #111;
+  color: #fff;
 }
