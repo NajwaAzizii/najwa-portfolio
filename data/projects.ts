@@ -17,7 +17,7 @@ export const projects: Project[] = [
     category: "GIS & Spatial Analysis",
     skills: ["GIS", "Spatial Analysis", "Web Mapping", "Leaflet", "Data Visualization"],
     link: "https://najwaazizii.github.io/sig-kualitas-air-sumur-pekanbaru/",
-    image: "/projects/gis.png",
+    image: "images/projects/gis.png",
   },
 
   {
@@ -28,7 +28,7 @@ export const projects: Project[] = [
     category: "Mobile AI",
     skills: ["Kotlin", "Machine Learning", "ONNX", "Android"],
     link: "https://drive.google.com/file/d/196Qr1BfUy1ACDHWACwkY-DZa3FZ_24Bu/view",
-    image: "/projects/mpu6050.png",
+    image: "images/projects/mpu6050.png",
   },
 
   {
@@ -39,7 +39,7 @@ export const projects: Project[] = [
     category: "Data Engineering",
     skills: ["PySpark", "ETL", "Data Engineering", "BI"],
     link: "https://najwaazizii.github.io/big-mart-analytics-dashboard/",
-    image: "/projects/bigmart.png",
+    image: "images/projects/bigmart.png",
   },
 
   {
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     category: "Software Testing",
     skills: ["QA", "Testing", "Test Case Design"],
     link: "https://drive.google.com/file/d/1WkgQYsZNb-p60P7eR6CW1MQLEI_qifRY/view",
-    image: "/projects/testing.png",
+    image: "images/projects/testing.png",
   },
 
   {
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     category: "3D Animation",
     skills: ["Blender", "3D Modeling", "Rendering"],
     link: "https://drive.google.com/file/d/1IhUz0Un1ZPEUXHvZrTyrCS_pb_VglaAz/view",
-    image: "/projects/blender.png",
+    image: "images/projects/blender.png",
   },
 
   {
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     category: "UI/UX Design",
     skills: ["Figma", "UI/UX", "System Design"],
     link: "https://www.figma.com/proto/uecgu8qTyGhznIUyUND0P2/RPL-Jagung",
-    image: "/projects/corngo.png",
+    image: "images/projects/corngo.png",
   },
 
   {
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     category: "Full Stack Web",
     skills: ["Web Dev", "Database", "System Design"],
     link: "https://www.youtube.com/watch?v=_rOxzVp7zOQ",
-    image: "/projects/rental.png",
+    image: "images/projects/rental.png",
   },
 
   {
@@ -94,7 +94,7 @@ export const projects: Project[] = [
     category: "Game Development",
     skills: ["Unity", "C#", "Game Design"],
     link: "https://drive.google.com/drive/folders/1XSWA1jHqF8ILFR9AO8jfZ0gyIdb_zBip",
-    image: "/projects/unity.png",
+    image: "images/projects/unity.png",
   },
 
   {
@@ -105,7 +105,7 @@ export const projects: Project[] = [
     category: "Game Development",
     skills: ["RPG Maker", "Game Design"],
     link: "https://drive.google.com/file/d/19eGvSlyvDCx_zTJcreFxKZyhgAcsiYQA/view",
-    image: "/projects/rpg.png",
+    image: "images/projects/rpg.png",
   },
 
   {
@@ -116,7 +116,7 @@ export const projects: Project[] = [
     category: "Algorithm System",
     skills: ["Python", "Algorithms", "Logic"],
     link: "https://drive.google.com/file/d/1ih5OXJDK_nDKgjR2eode-dv5k8vh9ufm/view",
-    image: "/projects/filter.png",
+    image: "images/projects/filter.png",
   },
 
   {
@@ -127,7 +127,7 @@ export const projects: Project[] = [
     category: "UI/UX Design",
     skills: ["Figma", "UX Research"],
     link: "https://drive.google.com/file/d/1HznBskl23rsb25jwg3OxSxHJp8zKCgXG/view",
-    image: "/projects/monify.png",
+    image: "images/projects/monify.png",
   },
 
   {
@@ -138,7 +138,7 @@ export const projects: Project[] = [
     category: "Data Analytics",
     skills: ["SQL", "Tableau", "ETL"],
     link: "https://public.tableau.com/views/Najwa_MonitoringRatingHargaWine/DashboardFinal",
-    image: "/projects/wine.png",
+    image: "images/projects/wine.png",
   },
 
   {
@@ -149,7 +149,7 @@ export const projects: Project[] = [
     category: "Full Stack Web",
     skills: ["PHP", "MySQL", "Web Dev"],
     link: "https://github.com/NajwaAzizii/warung_uj",
-    image: "/projects/warung.png",
+    image: "images/projects/warung.png",
   },
 
   {
@@ -160,7 +160,7 @@ export const projects: Project[] = [
     category: "System Simulation",
     skills: ["OS", "Algorithms"],
     link: "https://najwaazizii.github.io/cpu-scheduling-simulator/",
-    image: "/projects/cpu.png",
+    image: "images/projects/cpu.png",
   },
 
   {
@@ -171,7 +171,7 @@ export const projects: Project[] = [
     category: "3D Animation",
     skills: ["Blender", "Rendering"],
     link: "https://drive.google.com/file/d/1A_1vAEzVyd8_7SRxeAwSj-0jtB2H2wTM/view",
-    image: "/projects/coke.png",
+    image: "images/projects/coke.jpg",
   },
 
   {
@@ -182,6 +182,6 @@ export const projects: Project[] = [
     category: "Full Stack Web",
     skills: ["Web Dev", "Database", "System Design"],
     link: "https://github.com/NajwaAzizii/Reservasi_GSG1",
-    image: "/projects/gsg.png",
+    image: "images/projects/gsg.png",
   },
 ];
