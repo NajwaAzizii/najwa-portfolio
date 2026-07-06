@@ -1,55 +1,123 @@
 export const skillCategories = [
   {
-    title: "Frontend",
+    title: "Full-Stack Development",
     skills: [
-      "React",
+      "React.js",
       "Next.js",
-      "TypeScript",
       "JavaScript",
+      "PHP",
+      "Laravel",
       "HTML",
       "CSS",
-      "Tailwind CSS",
+      "MySQL",
+      "Supabase",
       "Bootstrap",
     ],
   },
+
   {
-    title: "Backend",
+    title: "Backend & System Design",
     skills: [
-      "PHP",
-      "Laravel",
-      "MySQL",
       "REST API",
+      "System Design",
+      "Problem Solving",
+      "Algorithm Design",
+      "Operating Systems",
+      "Discrete Mathematics",
+      "Boolean Logic",
+      "Set Theory",
     ],
   },
+
   {
-    title: "Artificial Intelligence",
+    title: "Artificial Intelligence & Data",
     skills: [
       "Python",
+      "Machine Learning",
+      "Big Data Analytics",
+      "PySpark",
+      "ETL",
+      "Data Warehouse Architecture",
+      "Data Visualization",
+      "Tableau",
+      "Azure AI",
       "YOLOv8",
       "OpenCV",
       "TensorFlow",
       "PyTorch",
-      "Pandas",
     ],
   },
+
   {
-    title: "Tools",
+    title: "Cybersecurity & Networking",
+    skills: [
+      "Cybersecurity",
+      "Network Security",
+      "Computer Networking",
+      "TCP/IP",
+      "Ethical Hacking",
+      "Penetration Testing",
+      "Digital Forensics",
+      "Linux",
+    ],
+  },
+
+  {
+    title: "UI/UX & Product Design",
+    skills: [
+      "UI/UX Design",
+      "Figma",
+      "Wireframing",
+      "Prototyping",
+      "User Research",
+    ],
+  },
+
+  {
+    title: "Game Development & 3D",
+    skills: [
+      "Unity",
+      "RPG Maker MV",
+      "Game Development",
+      "Game Design",
+      "Blender",
+      "3D Modeling",
+      "Rendering",
+      "Animation",
+      "Concept Art",
+      "Storyboarding",
+      "Animation Production",
+    ],
+  },
+
+  {
+    title: "GIS & Spatial Systems",
+    skills: [
+      "GIS",
+      "Spatial Data Analysis",
+    ],
+  },
+
+  {
+    title: "Tools & Workflow",
     skills: [
       "Git",
-      "FolderGit2",
-      "Figma",
+      "GitHub",
       "VS Code",
       "Postman",
       "Linux",
     ],
   },
+
   {
-    title: "Networking",
+    title: "Soft Skills",
     skills: [
-      "Cisco",
-      "MikroTik",
-      "TCP/IP",
-      "Network Security",
+      "Project Management",
+      "Leadership",
+      "Teamwork",
+      "Communication",
+      "Public Speaking",
+      "Analytical Skills",
     ],
   },
 ];

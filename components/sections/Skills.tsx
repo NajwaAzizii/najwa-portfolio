@@ -1,51 +1,50 @@
 import SectionTitle from "@/components/ui/SectionTitle";
 import Card from "@/components/ui/Card";
+import { skillCategories } from "@/data/skills";
 
-const skillData = [
-  {
-    title: "Frontend Development",
-    skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Next.js",
-      "Tailwind CSS",
-    ],
-  },
-  {
-    title: "Backend Development",
-    skills: [
-      "PHP",
-      "Laravel",
-      "Node.js",
-      "MySQL",
-      "REST API",
-    ],
-  },
-  {
-    title: "AI & Machine Learning",
-    skills: [
-      "Python",
-      "TensorFlow",
-      "PyTorch",
-      "YOLOv8",
-      "NLP",
-      "LLM (Qwen2.5)",
-    ],
-  },
-  {
-    title: "Tools & Networking",
-    skills: [
-      "Git & GitHub",
-      "Linux",
-      "Cisco Networking",
-      "MikroTik",
-      "Docker (basic)",
-    ],
-  },
-];
+const getLevel = (skill: string) => {
+  const expert = [
+    "React.js",
+    "Next.js",
+    "Python",
+    "JavaScript",
+    "MySQL",
+    "Laravel",
+    "Machine Learning",
+    "PySpark",
+  ];
+
+  const intermediate = [
+    "PHP",
+    "HTML",
+    "CSS",
+    "Tailwind CSS",
+    "Figma",
+    "Git",
+    "Linux",
+    "YOLOv8",
+    "OpenCV",
+    "Tableau",
+    "Unity",
+  ];
+
+  return expert.includes(skill)
+    ? "Expert"
+    : intermediate.includes(skill)
+    ? "Intermediate"
+    : "Familiar";
+};
+
+const getBadgeStyle = (level: string) => {
+  switch (level) {
+    case "Expert":
+      return "bg-black text-white";
+    case "Intermediate":
+      return "bg-neutral-200 text-neutral-800";
+    default:
+      return "bg-neutral-100 text-neutral-500";
+  }
+};
 
 export default function Skills() {
   return (
@@ -54,13 +53,13 @@ export default function Skills() {
 
         <SectionTitle
           badge="Skills"
-          title="Technical skills and engineering stack"
-          description="A combination of software development, artificial intelligence, and networking technologies I use to build real-world systems."
+          title="Technical expertise and engineering stack"
+          description="A structured overview of my technical, analytical, and engineering capabilities across multiple domains."
         />
 
         <div className="mt-14 grid gap-8 md:grid-cols-2">
 
-          {skillData.map((group) => (
+          {skillCategories.map((group) => (
             <Card key={group.title} className="p-6">
 
               <h3 className="text-lg font-semibold">
@@ -68,14 +67,22 @@ export default function Skills() {
               </h3>
 
               <div className="mt-5 flex flex-wrap gap-2">
-                {group.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-xs text-neutral-600"
-                  >
-                    {skill}
-                  </span>
-                ))}
+
+                {group.skills.map((skill) => {
+                  const level = getLevel(skill);
+
+                  return (
+                    <span
+                      key={skill}
+                      className={`rounded-full border px-3 py-1 text-xs ${getBadgeStyle(
+                        level
+                      )}`}
+                    >
+                      {skill}
+                    </span>
+                  );
+                })}
+
               </div>
 
             </Card>

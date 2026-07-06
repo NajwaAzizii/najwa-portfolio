@@ -1,36 +1,6 @@
 import SectionTitle from "@/components/ui/SectionTitle";
 import Card from "@/components/ui/Card";
-
-const certifications = [
-  {
-    title: "Cisco Networking Academy",
-    issuer: "Cisco",
-    year: "2025",
-    description:
-      "Completed networking fundamentals including routing, switching, and security basics.",
-  },
-  {
-    title: "CCNA Certification Preparation",
-    issuer: "Cisco",
-    year: "2025",
-    description:
-      "Studied and practiced core networking concepts aligned with CCNA certification.",
-  },
-  {
-    title: "MikroTik MTCNA",
-    issuer: "MikroTik",
-    year: "2024",
-    description:
-      "Learned basic routing, wireless networking, and MikroTik configuration.",
-  },
-  {
-    title: "EC-Council Cybersecurity Badge",
-    issuer: "EC-Council",
-    year: "2025",
-    description:
-      "Introduction to cybersecurity principles, threat analysis, and endpoint security.",
-  },
-];
+import { certifications } from "@/data/certifications";
 
 export default function Certifications() {
   return (
@@ -39,34 +9,83 @@ export default function Certifications() {
 
         <SectionTitle
           badge="Certifications"
-          title="Professional certifications and technical credentials"
-          description="Validated learning achievements in networking, cybersecurity, and software engineering fundamentals."
+          title="Verified technical credentials and achievements"
+          description="Professional certifications in cybersecurity, cloud, networking, and software engineering."
         />
 
-        <div className="mt-14 grid gap-8 md:grid-cols-2">
+        <div className="mt-14 space-y-14">
 
-          {certifications.map((cert, i) => (
-            <Card key={i} className="p-6">
+          {certifications.map((group) => (
+            <div key={group.category}>
 
-              <div className="flex items-center justify-between">
+              {/* CATEGORY HEADER */}
+              <div className="mb-6 flex items-center justify-between">
                 <h3 className="text-lg font-semibold">
-                  {cert.title}
+                  {group.category}
                 </h3>
 
-                <span className="text-sm text-neutral-500">
-                  {cert.year}
+                <span className="text-xs text-neutral-500">
+                  {group.items.length} certificates
                 </span>
               </div>
 
-              <p className="mt-1 text-sm font-medium text-neutral-600">
-                {cert.issuer}
-              </p>
+              {/* GRID */}
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
-              <p className="mt-4 text-sm leading-7 text-neutral-600">
-                {cert.description}
-              </p>
+                {group.items.map((cert) => (
+                  <Card
+                    key={cert.title}
+                    className="group overflow-hidden p-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                  >
 
-            </Card>
+                    {/* IMAGE */}
+                    <div className="relative h-44 overflow-hidden bg-neutral-100">
+                      <img
+                        src={cert.image}
+                        alt={cert.title}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+
+                      {/* overlay */}
+                      <div className="absolute inset-0 bg-black/0 transition-all duration-300 group-hover:bg-black/10" />
+                    </div>
+
+                    {/* CONTENT */}
+                    <div className="p-5">
+
+                      {/* TITLE */}
+                      <h4 className="text-sm font-semibold leading-5">
+                        {cert.title}
+                      </h4>
+
+                      {/* META */}
+                      <p className="mt-2 text-xs text-neutral-500">
+                        {cert.issuer} • {cert.year}
+                      </p>
+
+                      {/* BADGE */}
+                      <div className="mt-4 flex items-center justify-between">
+
+                        <span className="rounded-full border bg-neutral-50 px-2 py-1 text-[10px] text-neutral-600">
+                          Verified Credential
+                        </span>
+
+                        <a
+                          href={cert.credential}
+                          className="text-xs font-medium text-neutral-900 hover:underline"
+                        >
+                          View →
+                        </a>
+
+                      </div>
+
+                    </div>
+
+                  </Card>
+                ))}
+
+              </div>
+            </div>
           ))}
 
         </div>

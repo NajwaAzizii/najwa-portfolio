@@ -1,44 +1,6 @@
 import SectionTitle from "@/components/ui/SectionTitle";
 import Card from "@/components/ui/Card";
-
-const experiences = [
-  {
-    role: "Frontend Developer",
-    company: "Academic Project",
-    period: "2025 - Present",
-    description:
-      "Built responsive web applications using Next.js, Tailwind CSS, and modern UI architecture.",
-    points: [
-      "Developed full-stack academic projects",
-      "Implemented UI/UX design into production UI",
-      "Improved performance and responsive layout",
-    ],
-  },
-  {
-    role: "AI / Machine Learning Engineer",
-    company: "NLP & Computer Vision Projects",
-    period: "2024 - 2025",
-    description:
-      "Worked on YOLOv8 object detection and NLP sentiment analysis using LLM models.",
-    points: [
-      "Built traffic violation detection system using YOLOv8",
-      "Implemented sentiment analysis using Qwen2.5 LLM",
-      "Processed real-world datasets for model training",
-    ],
-  },
-  {
-    role: "Network Engineering Learner",
-    company: "Cisco & MikroTik Training",
-    period: "2023 - 2024",
-    description:
-      "Focused on networking fundamentals, routing, switching, and security basics.",
-    points: [
-      "Studied CCNA networking fundamentals",
-      "Configured MikroTik basic routing",
-      "Learned network security principles",
-    ],
-  },
-];
+import { experience } from "@/data/experience";
 
 export default function Experience() {
   return (
@@ -48,21 +10,21 @@ export default function Experience() {
         <SectionTitle
           badge="Experience"
           title="Engineering journey and practical experience"
-          description="A timeline of my learning and project-based experience in software engineering, AI, and networking."
+          description="A structured timeline of my experience across software engineering, AI, and networking."
         />
 
         <div className="mt-14 relative">
 
-          {/* Timeline line */}
+          {/* timeline line */}
           <div className="absolute left-3 top-0 h-full w-px bg-neutral-200" />
 
           <div className="space-y-10">
 
-            {experiences.map((exp, i) => (
-              <div key={i} className="relative pl-10">
+            {experience.map((exp) => (
+              <div key={exp.role} className="relative pl-10">
 
-                {/* Dot */}
-                <div className="absolute left-0 top-2 h-6 w-6 rounded-full border border-neutral-300 bg-white shadow-sm" />
+                {/* dot */}
+                <div className="absolute left-0 top-2 h-6 w-6 rounded-full border bg-white shadow-sm" />
 
                 <Card className="p-6">
 
